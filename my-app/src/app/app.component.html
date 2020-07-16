@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Indian Languages</h1>
+            <div class="form-group">
+                <label for="">Enter language</label>
+                <input class="form-control" type="text" [(ngModel)]="language" />
+            </div>
+            <div>
+                <label for="">Enter state</label>
+                <input class="form-control" type="text" [(ngModel)]="state" />
+            </div>
+            <div class="form-group"></div>
+            <p>Your language is : {{ language}}</p>
+            <button type="button" class="btn btn-success" (click)="addLanguage()">Add language</button>
+            <br>
+            <label>Enter index to delete</label>
+            <input class="form-control" type="text" [(ngModel)]="index">
+            <button type="button" class="btn btn-danger" (click)="deleteLanguageFirst()">Delete language</button>
+            <br/>
+            <div class="form-group">
+                <label for="">Search</label>
+                <input class="form-control" type="text" [(ngModel)]="searchText" />
+            </div>
+            <h2>You know below languages</h2><br/> {{listOfLanguages}}
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let temp of getFilteredLanguages()">{{temp.language}}-{{temp.state}}</li>
+            </ul>
+
+            <div class="alert alert-success" *ngIf="listOfLanguages.length > 3">
+                <strong>Congrats!</strong>You know more than 3 languages
+
+            </div>
+        </div>
+    </div>
+</div>
