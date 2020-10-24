@@ -1,3 +1,7 @@
+Deployed on - https://live-posts-fbdd5.web.app/post-list
+
+
+
 # LivePosts
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
